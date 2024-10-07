@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/ArrayList/_deps/googletest-src/googlemock/CMakeLists.txt
+  gtest-all.cc
+  gmock-all.cc
+  Generating Code...
+  gmock.vcxproj -> C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\lib\Debug\gmock.lib

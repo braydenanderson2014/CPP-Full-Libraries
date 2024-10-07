@@ -1,0 +1,10 @@
+^C:\USERS\BRAYD\ONEDRIVE\DOCUMENTS\GITHUB\CPP-FULL-LIBRARIES\ARRAYLIST\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\48920E9F79F1DF1C8E1D1DF79638D8AF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/ArrayList/_deps/googletest-subbuild -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/ArrayList/_deps/googletest-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/ArrayList/_deps/googletest-subbuild/googletest-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

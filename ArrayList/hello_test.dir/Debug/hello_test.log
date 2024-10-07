@@ -1,0 +1,54 @@
+﻿  hello_test.cc
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1587,26): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'hello_test.cc')
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1587,26):
+      the template instantiation context (the oldest one first) is
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\hello_test.cc(10,20):
+          see reference to class template instantiation 'ArrayList<int>' being compiled
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(130,9):
+          while compiling class template member function 'ArrayList<int>::ArrayList(const ArrayList<int> &)'
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\hello_test.cc(174,30):
+              see the first reference to 'ArrayList<int>::ArrayList' in 'ArrayListTest_CopyConstructor_Test::TestBody'
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1575,80):
+          while compiling class template member function 'void ArrayList<int>::merge(ArrayList<int> &,size_t,size_t,size_t)'
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1397,22):
+              see the first reference to 'ArrayList<int>::merge' in 'ArrayList<int>::mergeSort'
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\hello_test.cc(268,20):
+              see the first reference to 'ArrayList<int>::mergeSort' in 'ArrayListTest_MergeSortTest_Test::TestBody'
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1590,26): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'hello_test.cc')
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1597,22): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'hello_test.cc')
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1603,22): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'hello_test.cc')
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1488,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'hello_test.cc')
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1488,19):
+      the template instantiation context (the oldest one first) is
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1431,33):
+          while compiling class template member function 'void ArrayList<int>::resize(void)'
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(183,19):
+              see the first reference to 'ArrayList<int>::resize' in 'ArrayList<int>::add'
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\hello_test.cc(24,14):
+              see the first reference to 'ArrayList<int>::add' in 'ArrayListTest_Add_Test::TestBody'
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1474,87):
+          while compiling class template member function 'size_t ArrayList<int>::partition(bool (__cdecl *)(T,T),size_t,size_t)'
+          with
+          [
+              T=int
+          ]
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1544,27):
+              see the first reference to 'ArrayList<int>::partition' in 'ArrayList<int>::quickSortHelper'
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1337,24):
+              see the first reference to 'ArrayList<int>::quickSortHelper' in 'ArrayList<int>::quickSort'
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\hello_test.cc(240,20):
+              see the first reference to 'ArrayList<int>::quickSort' in 'ArrayListTest_QuickSortAscending_Test::TestBody'
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\ArrayList.h(1490,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'hello_test.cc')
+  
+  hello_test.vcxproj -> C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\ArrayList\Debug\hello_test.exe
