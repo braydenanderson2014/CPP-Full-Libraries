@@ -79,7 +79,8 @@ private:
     void swap(T* a, T* b);
 };
 
-
+#ifndef ARRAYLISTEXCEPTION
+#define ARRAYLISTEXCEPTION
 class ArrayListException : public std::exception {
 public:
     explicit ArrayListException(const std::string& message) : msg_(message) {}
@@ -89,8 +90,10 @@ public:
 private:
     std::string msg_;
 };
+#endif
 
-
+#ifndef INDEXOUTOFBOUNDSEXCEPTION
+#define INDEXOUTOFBOUNDSEXCEPTION
 class IndexOutOfBoundsException : public std::exception {
 public:
     explicit IndexOutOfBoundsException(const std::string& message) : msg_(message) {}
@@ -100,7 +103,7 @@ public:
 private:
     std::string msg_;
 };
-
+#endif
 
 /**
      * @brief Constructs a new ArrayList.
