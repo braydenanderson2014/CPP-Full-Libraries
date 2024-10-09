@@ -9,12 +9,13 @@
 #include <iostream>
 #include <limits>
 #include <algorithm>
-
+#include "TypeTraits.h"
 //#define DEBUG
 
 template <typename T>
 class SimpleVector {
 private:
+    static_assert(is_arithmetic<T>::value, "SimpleVector does not support non arithmetic types.");
     T* array; // Pointer to the array
     unsigned int count; // Number of elements in the array
     unsigned int capacity; // Capacity of the array
