@@ -1,0 +1,10 @@
+^C:\USERS\BRAYD\ONEDRIVE\DOCUMENTS\GITHUB\CPP-FULL-LIBRARY\HASHTABLE\CMAKEFILES\CDC7C45EA1B61C341F5E753BBA06290D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Hashtable -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Hashtable --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Hashtable/my_project.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -82,26 +82,9 @@ struct TypeTraits<T* const> {
     static const bool isReference = false;
 };
 
-template <typename T>
-struct TypeTraits<T& const> {
-    static const bool isPointer = false;
-    static const bool isReference = true;
-};
 
 template <typename T>
 struct TypeTraits<T* const&> {
-    static const bool isPointer = true;
-    static const bool isReference = true;
-};
-
-template <typename T>
-struct TypeTraits<T&& const> {
-    static const bool isPointer = false;
-    static const bool isReference = true;
-};
-
-template <typename T>
-struct TypeTraits<T*&& const> {
     static const bool isPointer = true;
     static const bool isReference = true;
 };
@@ -112,11 +95,6 @@ struct TypeTraits<const T* const> {
     static const bool isReference = false;
 };
 
-template <typename T>
-struct TypeTraits<const T& const> {
-    static const bool isPointer = false;
-    static const bool isReference = true;
-};
 
 template <typename T>
 struct TypeTraits<const T* const&> {
@@ -124,20 +102,9 @@ struct TypeTraits<const T* const&> {
     static const bool isReference = true;
 };
 
-template <typename T>
-struct TypeTraits<const T&& const> {
-    static const bool isPointer = false;
-    static const bool isReference = true;
-};
 
 template <typename T>
 struct TypeTraits<const T* const&&> {
-    static const bool isPointer = true;
-    static const bool isReference = true;
-};
-
-template <typename T>
-struct TypeTraits<T* const& const> {
     static const bool isPointer = true;
     static const bool isReference = true;
 };
@@ -168,9 +135,20 @@ struct is_arithmetic<long> {
 };
 
 template <>
-struct is_arithmetic<std::byte> {
+struct is_arithmetic<char> {
     static const bool value = true;
 };
+
+template <typename K, typename V>
+struct is_arithmetic<std::pair<K, V>> {
+    static const bool value = is_arithmetic<K>::value && is_arithmetic<V>::value;
+};
+
+template <typename V>
+struct is_arithmetic<std::vector<V>> {
+    static const bool value = is_arithmetic<V>::value;
+};
+
 
 template <typename T>
 struct is_Char {
@@ -233,21 +211,6 @@ struct is_floating_point<double> {
 };
 
 template <typename T>
-struct is_Array {
-    static const bool value = false;
-};
-
-template <typename T>
-struct is_Array<T[]> {
-    static const bool value = true;
-};
-
-template <typename T>
-struct is_Array<T[1]> {
-    static const bool value = true;
-};
-
-template <typename T>
 struct is_pointer {
     static const bool value = false;
 };
@@ -271,6 +234,73 @@ template <typename T>
 struct is_reference<T&> {
     static const bool value = true;
 };
+
+// is_Array
+template<typename T>
+struct is_Array : std::false_type {};
+
+template<typename T>
+struct is_Array<T[]> : std::true_type {};
+
+template<typename T, std::size_t N>
+struct is_Array<T[N]> : std::true_type {};
+
+// is_function
+template<typename T>
+struct is_function : std::false_type {};
+
+template<typename Ret, typename... Args>
+struct is_function<Ret(Args...)> : std::true_type {};
+
+// remove_cv
+template<typename T>
+struct remove_cv { using type = T; };
+
+template<typename T>
+struct remove_cv<const T> { using type = T; };
+
+template<typename T>
+struct remove_cv<volatile T> { using type = T; };
+
+template<typename T>
+struct remove_cv<const volatile T> { using type = T; };
+
+// remove_extent
+template<typename T>
+struct remove_extent { using type = T; };
+
+template<typename T>
+struct remove_extent<T[]> { using type = T; };
+
+template<typename T, std::size_t N>
+struct remove_extent<T[N]> { using type = T; };
+
+// add_pointer
+template<typename T>
+struct add_pointer { using type = T*; };
+
+template<typename T>
+struct add_pointer<T&> { using type = T*; };
+
+template<typename T>
+struct add_pointer<T&&> { using type = T*; };
+
+// remove_reference
+template<typename T>
+struct remove_reference { using type = T; };
+
+template<typename T>
+struct remove_reference<T&> { using type = T; };
+
+template<typename T>
+struct remove_reference<T&&> { using type = T; };
+
+// conditional
+template<bool B, class T, class F>
+struct conditional { using type = T; };
+
+template<class T, class F>
+struct conditional<false, T, F> { using type = F; };
 
 template <typename T>
 struct is_const {
@@ -367,17 +397,6 @@ struct is_unsigned {
     static const bool value = T(0) < T(-1);
 };
 
-// Check if a type is a function
-template<typename T>
-struct is_function {
-    static const bool value = false;
-};
-
-template<typename R, typename... Args>
-struct is_function<R(Args...)> {
-    static const bool value = true;
-};
-
 // Check if a type is a member function pointer
 template<typename T>
 struct is_member_function_pointer {
@@ -413,22 +432,6 @@ struct remove_const<const T> {
     typedef T type;
 };
 
-// Remove reference
-template<typename T>
-struct remove_reference {
-    typedef T type;
-};
-
-template<typename T>
-struct remove_reference<T&> {
-    typedef T type;
-};
-
-template<typename T>
-struct remove_reference<T&&> {
-    typedef T type;
-};
-
 // Remove pointer
 template<typename T>
 struct remove_pointer {
@@ -458,17 +461,6 @@ struct add_rvalue_reference {
     typedef T&& type;
 };
 
-// Conditional type selection
-template<bool B, class T, class F>
-struct conditional {
-    typedef T type;
-};
-
-template<class T, class F>
-struct conditional<false, T, F> {
-    typedef F type;
-};
-
 // Enable if (for SFINAE)
 template<bool B, class T = void>
 struct enable_if {};
@@ -477,29 +469,37 @@ template<class T>
 struct enable_if<true, T> {
     typedef T type;
 };
-
-// Decay (remove reference and cv-qualifiers, and convert array/function to pointer)
+// Helper trait for decay
 template<typename T>
-struct decay {
-private:
-    typedef typename remove_reference<T>::type U;
-public:
-    typedef typename conditional<
-        is_array<U>::value,
+struct decay_impl {
+    using U = typename remove_reference<T>::type;
+    using type =
+        typename conditional<
+        is_Array<U>::value,
         typename remove_extent<U>::type*,
         typename conditional<
-            is_function<U>::value,
-            typename add_pointer<U>::type,
-            typename remove_cv<U>::type
+        is_function<U>::value,
+        typename add_pointer<U>::type,
+        typename remove_cv<U>::type
         >::type
-    >::type type;
+        >::type;
 };
 
+// Main decay struct
+template<typename T>
+struct decay {
+    using type = typename decay_impl<T>::type;
+};
+
+// Convenience alias
+template<typename T>
+using decay_t = typename decay<T>::type;
 // Alignment of type
 template<typename T>
 struct alignment_of {
     static const size_t value = alignof(T);
 };
+
 
 // Check if types are the same, ignoring const/volatile qualifiers
 template<typename T, typename U>
@@ -570,11 +570,6 @@ private:                                                                \
 public:                                                                 \
     static constexpr bool value = type::value;                          \
 };
-
-// Example usage of DEFINE_HAS_MEMBER_FUNCTION:
-// DEFINE_HAS_MEMBER_FUNCTION(size)
-// This would define has_size<T, Ret(Args...)> which checks if T has a size() member function
-// with the specified return type and arguments.
 
 
 #endif // TYPETRAITS_H
