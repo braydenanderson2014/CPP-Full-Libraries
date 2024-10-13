@@ -2,8 +2,16 @@ cmake_minimum_required(VERSION 3.14)
 project(my_project)
 
 # GoogleTest requires at least C++14
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# If you're using MSVC (Visual Studio Compiler)
+if(MSVC)
+    add_compile_options(/std:c++17)
+else()
+    # For other compilers like GCC or Clang
+    add_compile_options(-std=c++17)
+endif()
 
 include(FetchContent)
 FetchContent_Declare(

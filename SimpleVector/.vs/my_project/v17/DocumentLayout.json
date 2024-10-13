@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\brayd\\OneDrive\\Documents\\GitHub\\CPP-Full-Library\\SimpleVector\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A8D9AC10-B536-3021-A2B9-BE7F1564F7D1}|hello_test.vcxproj|C:\\USERS\\BRAYD\\ONEDRIVE\\DOCUMENTS\\GITHUB\\CPP-FULL-LIBRARY\\SIMPLEVECTOR\\SIMPLEVECTOR.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A8D9AC10-B536-3021-A2B9-BE7F1564F7D1}|hello_test.vcxproj|solutionrelative:SIMPLEVECTOR.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\brayd\\OneDrive\\Documents\\GitHub\\CPP-Full-Libraries\\SimpleVector\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,20 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SimpleVector.h",
-              "DocumentMoniker": "C:\\Users\\brayd\\OneDrive\\Documents\\GitHub\\CPP-Full-Library\\SimpleVector\\SimpleVector.h",
-              "RelativeDocumentMoniker": "SimpleVector.h",
-              "ToolTip": "C:\\Users\\brayd\\OneDrive\\Documents\\GitHub\\CPP-Full-Library\\SimpleVector\\SimpleVector.h",
-              "RelativeToolTip": "SimpleVector.h",
-              "ViewState": "AgIAACcBAAAAAAAAAAAAADUBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-08T18:49:10.026Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d84ee353-0bef-5a41-a649-8f89aca5d84d}"
             },
             {
               "$type": "Bookmark",

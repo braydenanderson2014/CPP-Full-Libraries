@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\hello_test.cc">
+    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\hello_test.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{92F5C2C0-6773-33E3-BC58-AEA827CA4760}</UniqueIdentifier>
+      <UniqueIdentifier>{0E56492A-A424-3150-8B8B-71CCE4C7BB82}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

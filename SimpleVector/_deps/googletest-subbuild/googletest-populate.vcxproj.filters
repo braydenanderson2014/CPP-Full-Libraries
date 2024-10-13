@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\1a3619d23986da9ab80ab7ba5bf0f52f\googletest-populate-mkdir.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\9efa16300234876c2d8224a769208a2c\googletest-populate-mkdir.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\1a3619d23986da9ab80ab7ba5bf0f52f\googletest-populate-download.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\9efa16300234876c2d8224a769208a2c\googletest-populate-download.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\1a3619d23986da9ab80ab7ba5bf0f52f\googletest-populate-update.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\9efa16300234876c2d8224a769208a2c\googletest-populate-update.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\1a3619d23986da9ab80ab7ba5bf0f52f\googletest-populate-patch.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\9efa16300234876c2d8224a769208a2c\googletest-populate-patch.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\1a3619d23986da9ab80ab7ba5bf0f52f\googletest-populate-configure.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\9efa16300234876c2d8224a769208a2c\googletest-populate-configure.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\1a3619d23986da9ab80ab7ba5bf0f52f\googletest-populate-build.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\9efa16300234876c2d8224a769208a2c\googletest-populate-build.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\1a3619d23986da9ab80ab7ba5bf0f52f\googletest-populate-install.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\9efa16300234876c2d8224a769208a2c\googletest-populate-install.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\1a3619d23986da9ab80ab7ba5bf0f52f\googletest-populate-test.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\9efa16300234876c2d8224a769208a2c\googletest-populate-test.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\4ed2834305ff81b24ceaa1ca309912b2\googletest-populate-complete.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\900b1124025a713e18cab78470e88a16\googletest-populate-complete.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\2be8170efe7b2af4cdd8c2ade3e35caf\googletest-populate.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\e99145a9bfd583901fb1a7169df58f27\googletest-populate.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+    <None Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{ED9DF339-B5D8-3C4A-80AC-3E3ECF956F8E}</UniqueIdentifier>
+      <UniqueIdentifier>{DE1CE6D3-A0D0-3163-9A52-B1C920873DDA}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

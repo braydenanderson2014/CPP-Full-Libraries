@@ -1,13 +1,14 @@
-﻿  hello_test.cc
-C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\HashTable.h(143,33): warning C4305: 'initializing': truncation from 'double' to 'float'
+﻿  Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Hashtable/CMakeLists.txt
+  hello_test.cc
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\HashTable.h(312,33): warning C4305: 'initializing': truncation from 'double' to 'float'
   (compiling source file 'hello_test.cc')
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\HashTable.h(143,33):
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\HashTable.h(312,33):
       the template instantiation context (the oldest one first) is
-          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\hello_test.cc(7,33):
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\hello_test.cc(7,33):
           see reference to class template instantiation 'HashTable<std::string,int,KeyHash<std::string>>' being compiled
-          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\HashTable.h(294,36):
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\HashTable.h(365,36):
           while compiling class template member function 'HashTable<std::string,int,KeyHash<std::string>>::HashTable(void)'
-              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\hello_test.cc(13,1):
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\hello_test.cc(13,1):
               see the first reference to 'HashTable<std::string,int,KeyHash<std::string>>::HashTable' in 'HashTableTest::HashTableTest'
   
-  hello_test.vcxproj -> C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\Debug\hello_test.exe
+  hello_test.vcxproj -> C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\Debug\hello_test.exe

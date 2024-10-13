@@ -2,10 +2,13 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\x64\Debug\ALL_BUILD</FullPath>
+      <FullPath>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\Debug\hello_test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\x64\Debug\ALL_BUILD</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

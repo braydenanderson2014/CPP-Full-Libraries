@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector
+# Install script for directory: C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-build/cmake_install.cmake")
+  include("C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

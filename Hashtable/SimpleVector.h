@@ -55,13 +55,15 @@ public:
     T& get(unsigned int index); // Get the element at the specified index
     bool isEmpty() const; // Check if the array is empty
     int indexOf(const T& element); // Get the index of the specified element
+    bool contains(const T& element); // Check if the array contains the specified element
+    bool contains(const T& element) const; // Check if the array contains the specified element
 
     SimpleVectorIterator begin(); // Get an iterator pointing to the first element in the array
     SimpleVectorIterator end(); // Get an iterator pointing to one past the last element in the array
 
     const SimpleVectorIterator cbegin(); // Get a const iterator pointing to the first element in the array.
     const SimpleVectorIterator cend(); // Get a const iterator pointing to one past the last element in the array.
-
+    
     typedef SimpleVectorIterator iterator; // Define the iterator type
 };
 
@@ -804,6 +806,28 @@ template <typename T>
 const typename SimpleVector<T>::SimpleVectorIterator SimpleVector<T>::cend() {
     return SimpleVectorIterator(array + count, array + count);
 }
+
+
+template <typename T>
+bool SimpleVector<T>::contains(const T& element) {
+    for (unsigned int i = 0; i < count; i++) {
+        if (array[i] == element) {
+            return true;
+        }
+    }
+    return false;
+}
+
+template <typename T>
+bool SimpleVector<T>::contains(const T& element) const{
+    for (unsigned int i = 0; i < count; i++) {
+        if (array[i] == element) {
+            return true;
+        }
+    }
+    return false;
+}
+
 
 
 

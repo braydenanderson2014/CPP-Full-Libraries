@@ -1,0 +1,10 @@
+^C:\USERS\BRAYD\ONEDRIVE\DOCUMENTS\GITHUB\CPP-FULL-LIBRARIES\PROPERTIES\CMAKEFILES\03646D82A7D253F259F389FA27516C90\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Properties -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Properties --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Properties/my_project.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

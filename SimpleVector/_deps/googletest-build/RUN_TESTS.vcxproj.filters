@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\CMakeFiles\077edf410414a96e5b463d2160731c8d\RUN_TESTS_force.rule">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\CMakeFiles\e28e77a2c6744710a78e95d014eef0d2\RUN_TESTS_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{C01E6D23-D32B-33BA-92B6-1C87DC0F83E5}</UniqueIdentifier>
+      <UniqueIdentifier>{7A96861F-3A90-3FE9-9862-8784E69AD758}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

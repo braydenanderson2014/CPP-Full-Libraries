@@ -1,2 +1,3 @@
-﻿  hello_test.cc
-  hello_test.vcxproj -> C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\Debug\hello_test.exe
+﻿  Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/CMakeLists.txt
+  hello_test.cc
+  hello_test.vcxproj -> C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\Debug\hello_test.exe

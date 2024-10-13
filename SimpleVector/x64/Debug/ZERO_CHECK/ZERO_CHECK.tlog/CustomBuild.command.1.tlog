@@ -1,6 +1,6 @@
-^C:\USERS\BRAYD\ONEDRIVE\DOCUMENTS\GITHUB\CPP-FULL-LIBRARY\SIMPLEVECTOR\CMAKEFILES\A9EA50B52F1365C452965B1DE1AD0B15\GENERATE.STAMP.RULE
+^C:\USERS\BRAYD\ONEDRIVE\DOCUMENTS\GITHUB\CPP-FULL-LIBRARIES\SIMPLEVECTOR\CMAKEFILES\330D53400660EEE4DD7235E07B7BBF9B\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/my_project.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/my_project.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

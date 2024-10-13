@@ -1,0 +1,28 @@
+﻿  hello_test.cc
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(87,5): error C2664: 'bool Properties::store(std::string,Properties::FileTypes)': cannot convert argument 1 from 'std::stringstream' to 'std::string'
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(87,5):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Properties.h(149,10):
+      see declaration of 'Properties::store'
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(87,5):
+      while trying to match the argument list '(std::stringstream, Properties::FileTypes)'
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(87,5): error C2737: 'gtest_ar_': const object must be initialized
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(100,5): error C2664: 'bool Properties::store(std::string,Properties::FileTypes)': cannot convert argument 1 from 'std::stringstream' to 'std::string'
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(100,5):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Properties.h(149,10):
+      see declaration of 'Properties::store'
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(100,5):
+      while trying to match the argument list '(std::stringstream, Properties::FileTypes)'
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(100,5): error C2737: 'gtest_ar_': const object must be initialized
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(113,5): error C2664: 'bool Properties::store(std::string,Properties::FileTypes)': cannot convert argument 1 from 'std::stringstream' to 'std::string'
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(113,5):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Properties.h(149,10):
+      see declaration of 'Properties::store'
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(113,5):
+      while trying to match the argument list '(std::stringstream, Properties::FileTypes)'
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(113,5): error C2737: 'gtest_ar_': const object must be initialized

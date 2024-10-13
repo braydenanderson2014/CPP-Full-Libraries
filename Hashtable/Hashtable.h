@@ -128,17 +128,6 @@ struct KeyHash<short> {
 
 template <typename K, typename V, typename Hash = KeyHash<K>>
 class HashTable {
-private:
-    static const int INITIAL_TABLE_SIZE = 16; // The initial size of the table
-    Entry** table; // The table itself
-    int TABLE_SIZE; // The current size of the table
-    int count;  // The number of elements in the table
-    float loadFactorThreshold = 0.7; // The load factor threshold for resizing
-    Hash hashFunction; // The hash function to use
-    
-    void resize();
-    void clear(Entry** table, int capacity);
-    int hash(const K& key);
 public:
     HashTable();
     ~HashTable();
@@ -165,21 +154,6 @@ public:
     bool operator==(const HashTable<K, V, Hash>& other) const;
     bool operator!=(const HashTable<K, V, Hash>& other) const;
 
-
-
-
-    HashtableIterator beginIterator() const {
-        for (int i = 0; i < TABLE_SIZE; ++i) {
-            if (table[i] != nullptr) {
-                return HashtableIterator(this, i, table[i]);
-            }
-        }
-        return endIterator();
-    }
-
-    HashtableIterator endIterator() const {
-        return HashtableIterator(this, TABLE_SIZE, nullptr);
-    }
 
     int getTableSize() const {
         return TABLE_SIZE;
@@ -328,7 +302,19 @@ public:
     HashtableIterator end();
     HashtableIterator cbegin() const;
     HashtableIterator cend() const;
+
     
+    private:
+    static const int INITIAL_TABLE_SIZE = 16; // The initial size of the table
+    Entry** table; // The table itself
+    int TABLE_SIZE; // The current size of the table
+    int count;  // The number of elements in the table
+    float loadFactorThreshold = 0.7; // The load factor threshold for resizing
+    Hash hashFunction; // The hash function to use
+    
+    void resize();
+    void clear(Entry** table, int capacity);
+    int hash(const K& key);
 };
 
 //===============================================================
@@ -535,11 +521,11 @@ int HashTable<K, V, Hash>::hash(const K& key) {
 template <typename K, typename V, typename Hash>
 typename HashTable<K, V, Hash>::HashtableIterator HashTable<K, V, Hash>::begin() {
     for (int i = 0; i < TABLE_SIZE; ++i) {
-        if (table[i] != nullptr) {
-            return HashtableIterator(this, i, table[i]);
+            if (table[i]) {
+                return HashtableIterator(this, i, table[i]);
+            }
         }
-    }
-    return end();
+        return end();
 }
 
 template <typename K, typename V, typename Hash>
@@ -550,11 +536,11 @@ typename HashTable<K, V, Hash>::HashtableIterator HashTable<K, V, Hash>::end() {
 template <typename K, typename V, typename Hash>
 typename HashTable<K, V, Hash>::HashtableIterator HashTable<K, V, Hash>::cbegin() const {
     for (int i = 0; i < TABLE_SIZE; ++i) {
-        if (table[i] != nullptr) {
-            return HashtableIterator(this, i, table[i]);
+            if (table[i]) {
+                return HashtableIterator(this, TABLE_SIZE, table[i]);
+            }
         }
-    }
-    return cend();
+        return cend();
 }
 
 template <typename K, typename V, typename Hash>

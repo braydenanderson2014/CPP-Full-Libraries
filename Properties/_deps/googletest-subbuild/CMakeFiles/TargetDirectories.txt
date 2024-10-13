@@ -1,0 +1,3 @@
+C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Properties/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Properties/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Properties/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir

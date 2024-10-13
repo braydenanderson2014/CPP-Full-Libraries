@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0D2024C9-7153-3AB7-9F66-51B577615C21}</ProjectGuid>
+    <ProjectGuid>{9CF6A780-D39C-3240-B0A8-D24695975042}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gmock.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\lib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\lib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gmock.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gmock.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -87,7 +87,7 @@
       <DisableSpecificWarnings>4251;4275;4702</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -100,15 +100,15 @@
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\lib\Debug\gmockpdb_debug_postfix-NOTFOUND.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\lib\Debug\gmockpdb_debug_postfix-NOTFOUND.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -121,7 +121,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -129,7 +129,7 @@
       <DisableSpecificWarnings>4251;4275;4702</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -144,15 +144,15 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\lib\Release\gmock.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\lib\Release\gmock.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -165,7 +165,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -173,7 +173,7 @@
       <DisableSpecificWarnings>4251;4275;4702</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -188,15 +188,15 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\lib\MinSizeRel\gmock.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\lib\MinSizeRel\gmock.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -209,7 +209,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -218,7 +218,7 @@
       <DisableSpecificWarnings>4251;4275;4702</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -231,15 +231,15 @@
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\lib\RelWithDebInfo\gmock.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\lib\RelWithDebInfo\gmock.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\include;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -251,11 +251,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,12 +263,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -276,12 +276,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -289,12 +289,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/SimpleVector/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/SimpleVector/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -302,18 +302,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googletest\src\gtest-all.cc" />
-    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\_deps\googletest-src\googlemock\src\gmock-all.cc" />
+    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googletest\src\gtest-all.cc" />
+    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\_deps\googletest-src\googlemock\src\gmock-all.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\SimpleVector\ZERO_CHECK.vcxproj">
-      <Project>{E7922A9B-DD1F-3E73-AAB6-9BD8962EFF75}</Project>
+    <ProjectReference Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\SimpleVector\ZERO_CHECK.vcxproj">
+      <Project>{A182C7E1-09E2-3F23-AAEF-A8A7272A50A7}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

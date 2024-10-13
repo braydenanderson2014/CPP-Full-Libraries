@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\_deps\googletest-src\googletest\src\gtest-all.cc">
+    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\_deps\googletest-src\googletest\src\gtest-all.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\_deps\googletest-src\googlemock\src\gmock-all.cc">
+    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\_deps\googletest-src\googlemock\src\gmock-all.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\_deps\googletest-src\googlemock\src\gmock_main.cc">
+    <ClCompile Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\_deps\googletest-src\googlemock\src\gmock_main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Hashtable\_deps\googletest-src\googlemock\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Hashtable\_deps\googletest-src\googlemock\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{03986738-3467-3887-9A55-A780F1578410}</UniqueIdentifier>
+      <UniqueIdentifier>{894030B5-A548-3E41-B241-402935638CBE}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -9,9 +9,10 @@
 class Properties {
 private:
     HashTable<std::string, std::string> hashtable;
-    enum FileTypes { Property, XML, JSON, YAML, CSV, INI, TOML, HOCON, HCL, DOTENV, ENV, CFG, CONF, CNF, LST, LIST, TEXT, TXT, OTHER };
 
 public:
+    enum FileTypes { Property, XML, JSON, YAML, CSV, INI, TOML, HOCON, HCL, DOTENV, ENV, CFG, CONF, CNF, LST, LIST, TEXT, TXT, OTHER };
+
     /**
      * @brief Constructs a new Properties object.
      * 
@@ -331,8 +332,9 @@ public:
         HashTable<std::string, std::string>::HashtableIterator iterator;    
 
     public:
-        PropertiesIterator(const HashTable<std::string, std::string>* ht, int bucket, HashTable<std::string, std::string>::Entry* entry)
-            : iterator(ht, bucket, entry) {}    
+        PropertiesIterator(HashTable<std::string, std::string>::HashtableIterator it)
+        : iterator(std::move(it)) {}
+
 
         std::pair<std::string, std::string> operator*() {
             auto kv = *iterator;
@@ -347,14 +349,16 @@ public:
         bool operator!=(const PropertiesIterator& other) const {
             return iterator != other.iterator;
         }
+
+        
     };
 
     PropertiesIterator begin() const {
-        return PropertiesIterator(&hashtable, 0, hashtable.beginIterator().getCurrentEntry());
+        return PropertiesIterator(hashtable.cbegin());
     }
 
     PropertiesIterator end() const {
-        return PropertiesIterator(&hashtable, hashtable.getTableSize(), nullptr);
+        return PropertiesIterator(hashtable.cend());
     }
     
 };
