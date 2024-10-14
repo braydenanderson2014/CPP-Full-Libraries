@@ -235,8 +235,11 @@ public:
         }
     public:
         HashtableIterator(const HashTable<K, V, Hash>* ht, int bucket, Entry* entry)
-                : hashtable(ht), currentBucket(bucket), currentEntry(entry) {}
-        
+            : hashtable(ht), currentBucket(bucket), currentEntry(entry) {
+            if (currentEntry == nullptr && bucket < hashtable->TABLE_SIZE) {
+                goToNextEntry();
+            }
+        }
         KeyValuePair operator*() {
             if (currentEntry == nullptr) {
                 throw std::runtime_error("Dereferencing end iterator");
@@ -295,7 +298,22 @@ public:
             return values;
         }
 
-        
+        const KeyValuePair* operator->() const {
+            if (currentEntry == nullptr) {
+                throw std::runtime_error("Dereferencing end iterator");
+            }
+            static KeyValuePair temp{currentEntry->key, currentEntry->value};
+            return &temp;
+        }
+
+        // Optionally, add a non-const version if needed
+        KeyValuePair* operator->() {
+            if (currentEntry == nullptr) {
+                throw std::runtime_error("Dereferencing end iterator");
+            }
+            static KeyValuePair temp{currentEntry->key, currentEntry->value};
+            return &temp;
+        }
         
     };
     HashtableIterator begin();
@@ -520,27 +538,17 @@ int HashTable<K, V, Hash>::hash(const K& key) {
 
 template <typename K, typename V, typename Hash>
 typename HashTable<K, V, Hash>::HashtableIterator HashTable<K, V, Hash>::begin() {
-    for (int i = 0; i < TABLE_SIZE; ++i) {
-            if (table[i]) {
-                return HashtableIterator(this, i, table[i]);
-            }
-        }
-        return end();
+    return HashtableIterator(this, 0, nullptr);
 }
 
 template <typename K, typename V, typename Hash>
-typename HashTable<K, V, Hash>::HashtableIterator HashTable<K, V, Hash>::end() {
+typename HashTable<K, V, Hash>::HashtableIterator HashTable<K, V, Hash>::end()  {
     return HashtableIterator(this, TABLE_SIZE, nullptr);
 }
 
 template <typename K, typename V, typename Hash>
 typename HashTable<K, V, Hash>::HashtableIterator HashTable<K, V, Hash>::cbegin() const {
-    for (int i = 0; i < TABLE_SIZE; ++i) {
-            if (table[i]) {
-                return HashtableIterator(this, TABLE_SIZE, table[i]);
-            }
-        }
-        return cend();
+    return HashtableIterator(this, 0, nullptr);
 }
 
 template <typename K, typename V, typename Hash>
