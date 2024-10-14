@@ -87,6 +87,7 @@ TEST_F(PropertiesTest, StoreAndLoadProperty) {
     EXPECT_TRUE(props.store(ss, Properties::FileTypes::Property));
     
     Properties newProps;
+    ss.seekg(0);  // Reset stringstream position to the beginning
     EXPECT_TRUE(newProps.load(ss, Properties::FileTypes::Property));
     
     EXPECT_EQ(newProps.size(), props.size());
@@ -99,15 +100,17 @@ TEST_F(PropertiesTest, StoreAndLoadXML) {
     std::stringstream ss;
     EXPECT_TRUE(props.store(ss, Properties::FileTypes::XML));
     
+
     Properties newProps;
+    ss.seekg(0);  // Reset stringstream position to the beginning
     EXPECT_TRUE(newProps.load(ss, Properties::FileTypes::XML));
     
+
     EXPECT_EQ(newProps.size(), props.size());
     EXPECT_EQ(newProps.getProperty("key1"), "value1");
     EXPECT_EQ(newProps.getProperty("key2"), "value2");
     EXPECT_EQ(newProps.getProperty("key3"), "value3");
 }
-
 TEST_F(PropertiesTest, StoreAndLoadJSON) {
     std::stringstream ss;
     EXPECT_TRUE(props.store(ss, Properties::FileTypes::JSON));

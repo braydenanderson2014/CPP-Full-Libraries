@@ -1,28 +1,13 @@
 ﻿  hello_test.cc
-C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(87,5): error C2664: 'bool Properties::store(std::string,Properties::FileTypes)': cannot convert argument 1 from 'std::stringstream' to 'std::string'
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(87,5):
-      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Properties.h(149,10):
-      see declaration of 'Properties::store'
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(87,5):
-      while trying to match the argument list '(std::stringstream, Properties::FileTypes)'
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\HashTable.h(330,33): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'hello_test.cc')
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\HashTable.h(330,33):
+      the template instantiation context (the oldest one first) is
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Properties.h(11,41):
+          see reference to class template instantiation 'HashTable<std::string,std::string,KeyHash<std::string>>' being compiled
+          C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\HashTable.h(383,36):
+          while compiling class template member function 'HashTable<std::string,std::string,KeyHash<std::string>>::HashTable(void)'
+              C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Properties.h(299,15):
+              see the first reference to 'HashTable<std::string,std::string,KeyHash<std::string>>::HashTable' in 'Properties::Properties'
   
-C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(87,5): error C2737: 'gtest_ar_': const object must be initialized
-C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(100,5): error C2664: 'bool Properties::store(std::string,Properties::FileTypes)': cannot convert argument 1 from 'std::stringstream' to 'std::string'
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(100,5):
-      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Properties.h(149,10):
-      see declaration of 'Properties::store'
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(100,5):
-      while trying to match the argument list '(std::stringstream, Properties::FileTypes)'
-  
-C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(100,5): error C2737: 'gtest_ar_': const object must be initialized
-C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(113,5): error C2664: 'bool Properties::store(std::string,Properties::FileTypes)': cannot convert argument 1 from 'std::stringstream' to 'std::string'
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(113,5):
-      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Properties.h(149,10):
-      see declaration of 'Properties::store'
-      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(113,5):
-      while trying to match the argument list '(std::stringstream, Properties::FileTypes)'
-  
-C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\hello_test.cc(113,5): error C2737: 'gtest_ar_': const object must be initialized
+  hello_test.vcxproj -> C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Libraries\Properties\Debug\hello_test.exe

@@ -10,6 +10,283 @@ class Properties {
 private:
     HashTable<std::string, std::string> hashtable;
 
+    bool loadPropertyFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadXMLFormat(std::istream& is) {
+        std::string line, key, value;
+        bool inProperty = false;
+        while (std::getline(is, line)) {
+            // Trim leading and trailing whitespace
+            line.erase(0, line.find_first_not_of(" \t\r\n"));
+            line.erase(line.find_last_not_of(" \t\r\n") + 1);
+
+
+            if (line == "<property>") {
+                inProperty = true;
+                key.clear();
+                value.clear();
+            } else if (line == "</property>") {
+                inProperty = false;
+                if (!key.empty() && !value.empty()) {
+                    setProperty(key, value);
+                }
+            } else if (line.find("<key>") != std::string::npos) {
+                size_t start = line.find(">") + 1;
+                size_t end = line.find("</key>");
+                if (end != std::string::npos) {
+                    key = line.substr(start, end - start);
+                }
+            } else if (line.find("<value>") != std::string::npos) {
+                size_t start = line.find(">") + 1;
+                size_t end = line.find("</value>");
+                if (end != std::string::npos) {
+                    value = line.substr(start, end - start);
+                }
+            }
+        }
+        return true;
+    }
+    bool loadJSONFormat(std::istream& is) {
+        std::string jsonContent((std::istreambuf_iterator<char>(is)), std::istreambuf_iterator<char>());
+        size_t pos = 0;
+        while ((pos = jsonContent.find("\"", pos)) != std::string::npos) {
+            size_t keyEnd = jsonContent.find("\"", pos + 1);
+            if (keyEnd == std::string::npos) break;
+            std::string key = jsonContent.substr(pos + 1, keyEnd - pos - 1);
+
+            pos = jsonContent.find("\"", keyEnd + 1);
+            if (pos == std::string::npos) break;
+            size_t valueEnd = jsonContent.find("\"", pos + 1);
+            if (valueEnd == std::string::npos) break;
+            std::string value = jsonContent.substr(pos + 1, valueEnd - pos - 1);
+
+            setProperty(key, value);
+            pos = valueEnd + 1;
+        }
+        return true;
+    }
+
+    bool loadYAMLFormat(std::istream& is) {
+        std::string line, key, value;
+        bool inProperty = false, inKey = false, inValue = false;
+        while (std::getline(is, line)) {
+            if (line.find("- key:") != std::string::npos) {
+                inProperty = true;
+                key.clear();
+                value.clear();
+            } else if (line.find("- value:") != std::string::npos) {
+                inProperty = false;
+                if (!key.empty() && !value.empty()) {
+                    setProperty(key, value);
+                }
+            } else if (line.find("key:") != std::string::npos) {
+                inKey = true;
+            } else if (line.find("value:") != std::string::npos) {
+                inValue = true;
+            } else if (inKey) {
+                key += line;
+            } else if (inValue) {
+                value += line;
+            }
+        }
+        return true;
+    }
+
+    bool loadINIFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadTOMLFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadHOCONFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadHCLFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadDOTENVFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadENVFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadCFGFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadCONFFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadCNFFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find('=');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadLSTFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find(',');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadLISTFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find(',');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadTEXTFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find(',');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadTXTFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find(',');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+    bool loadCSVFormat(std::istream& is) {
+        std::string line;
+        while (std::getline(is, line)) {
+            size_t pos = line.find(',');
+            if (pos != std::string::npos) {
+                std::string key = line.substr(0, pos);
+                std::string value = line.substr(pos + 1);
+                setProperty(key, value);
+            }
+        }
+        return true;
+    }
+
+
+
 public:
     enum FileTypes { Property, XML, JSON, YAML, CSV, INI, TOML, HOCON, HCL, DOTENV, ENV, CFG, CONF, CNF, LST, LIST, TEXT, TXT, OTHER };
 
@@ -157,14 +434,15 @@ public:
             }
             
         } else if(fileType == XML) {
-            for (const auto& kv : hashtable) {
-                os << "  <property>" << std::endl;
-                os << "    <key>" << kv.first() << "</key>" << std::endl;
-                os << "    <value>" << kv.second() << "</value>" << std::endl;
-                os << "  </property>" << std::endl;
+            os << "<properties>" << std::endl;
+            for (const auto& [key, value] : *this) {
+                os << "  <property>" << std::endl
+                    << "    <key>" << key << "</key>" << std::endl
+                    << "    <value>" << value << "</value>" << std::endl
+                    << "  </property>" << std::endl;
             }
-            
             os << "</properties>" << std::endl;
+            return true;
         } else if(fileType == JSON) {
             for (const auto& kv : hashtable) {
                 os << "  \"" << kv.first() << "\": \"" << kv.second() << "\"," << std::endl;
@@ -243,89 +521,133 @@ public:
         return true;
     }
 
-    bool load(std::istream& is, FileTypes fileType) {
-        std::string line;
-        if (fileType == Property || fileType == INI || fileType == DOTENV || fileType == ENV || fileType == CFG || fileType == CONF || fileType == CNF || fileType == LST || fileType == LIST || fileType == TEXT || fileType == TXT) {
-            while (std::getline(is, line)) {
-                size_t pos = line.find('=');
-                if (pos != std::string::npos) {
-                    std::string key = line.substr(0, pos);
-                    std::string value = line.substr(pos + 1);
-                    hashtable[key] = value;
+
+    bool Properties::store(std::ostream& out, FileTypes fileType) const {
+        switch (fileType) {
+            case FileTypes::Property:
+            case FileTypes::INI:
+            case FileTypes::DOTENV:
+            case FileTypes::ENV:
+            case FileTypes::CFG:
+            case FileTypes::CONF:
+            case FileTypes::CNF:
+            case FileTypes::LST:
+            case FileTypes::LIST:
+            case FileTypes::TEXT:
+            case FileTypes::TXT:
+                for (const auto& [key, value] : *this) {
+                    out << key << "=" << value << std::endl;
                 }
-            }
-        } else if (fileType == XML) {
-            // XML parsing logic
-            // This is a simplified example. You might want to use an XML parser library for robust parsing.
-            while (std::getline(is, line)) {
-                if (line.find("<key>") != std::string::npos) {
-                    std::string key = line.substr(line.find("<key>") + 5, line.find("</key>") - line.find("<key>") - 5);
-                    std::getline(is, line);
-                    std::string value = line.substr(line.find("<value>") + 7, line.find("</value>") - line.find("<value>") - 7);
-                    hashtable[key] = value;
+                return true;
+            case FileTypes::XML:
+                out << "<properties>" << std::endl;
+                for (const auto& [key, value] : *this) {
+                    out << "  <property>" << std::endl
+                        << "    <key>" << key << "</key>" << std::endl
+                        << "    <value>" << value << "</value>" << std::endl
+                        << "  </property>" << std::endl;
                 }
-            }
-            
-        } else if (fileType == JSON) {
-            // JSON parsing logic
-            // This is a simplified example. You might want to use a JSON parser library for robust parsing.
-            while (std::getline(is, line)) {
-                size_t keyStart = line.find('"') + 1;
-                size_t keyEnd = line.find('"', keyStart);
-                std::string key = line.substr(keyStart, keyEnd - keyStart);
-                size_t valueStart = line.find('"', keyEnd + 1) + 1;
-                size_t valueEnd = line.find('"', valueStart);
-                std::string value = line.substr(valueStart, valueEnd - valueStart);
-                hashtable[key] = value;
-            }
-        } else if (fileType == YAML) {
-            // YAML parsing logic
-            // This is a simplified example. You might want to use a YAML parser library for robust parsing.
-            while (std::getline(is, line)) {
-                if (line.find("key:") != std::string::npos) {
-                    std::string key = line.substr(line.find("key:") + 5);
-                    std::getline(is, line);
-                    std::string value = line.substr(line.find("value:") + 7);
-                    hashtable[key] = value;
+                out << "</properties>" << std::endl;
+                return true;
+            case FileTypes::JSON:
+                out << "{" << std::endl;
+                {
+                    auto it = this->begin();
+                    auto end = this->end();
+                    while (it != end) {
+                        const auto& [key, value] = *it;
+                        out << "  \"" << key << "\": \"" << value << "\"";
+                        if (++it != end) out << ",";
+                        out << std::endl;
+                    }
                 }
-            }
-        } else if (fileType == CSV) {
-            while (std::getline(is, line)) {
-                size_t pos = line.find(',');
-                if (pos != std::string::npos) {
-                    std::string key = line.substr(0, pos);
-                    std::string value = line.substr(pos + 1);
-                    hashtable[key] = value;
+                out << "}" << std::endl;
+            break;
+
+            case FileTypes::YAML:
+                for (auto it = hashtable.cbegin(); it != hashtable.cend(); ++it) {
+                    out << it->first() << ": " << it->second() << std::endl;
                 }
-            }
-        } else if (fileType == TOML) {
-            // TOML parsing logic
-            // This is a simplified example. You might want to use a TOML parser library for robust parsing.
-            while (std::getline(is, line)) {
-                size_t pos = line.find('=');
-                if (pos != std::string::npos) {
-                    std::string key = line.substr(0, pos - 1);
-                    std::string value = line.substr(pos + 3, line.length() - pos - 4);
-                    hashtable[key] = value;
+                break;
+
+            case FileTypes::TOML:
+                for (auto it = hashtable.cbegin(); it != hashtable.cend(); ++it) {
+                    out << it->first() << " = \"" << it->second() << "\"" << std::endl;
                 }
-            }
-        } else if (fileType == HOCON || fileType == HCL) {
-            // HOCON and HCL parsing logic
-            // This is a simplified example. You might want to use a HOCON or HCL parser library for robust parsing.
-            while (std::getline(is, line)) {
-                size_t pos = line.find('=');
-                if (pos != std::string::npos) {
-                    std::string key = line.substr(0, pos - 1);
-                    std::string value = line.substr(pos + 3, line.length() - pos - 4);
-                    hashtable[key] = value;
+                break;
+
+            case FileTypes::HOCON:
+                out << "{" << std::endl;
+                for (auto it = hashtable.cbegin(); it != hashtable.cend(); ++it) {
+                    out << "  " << it->first() << " = \"" << it->second() << "\"" << std::endl;
                 }
-            }
-        } else {
-            return false;
+                out << "}" << std::endl;
+                break;
+
+            case FileTypes::HCL:
+                out << "properties = {" << std::endl;
+                for (auto it = hashtable.cbegin(); it != hashtable.cend(); ++it) {
+                    out << "  " << it->first() << " = \"" << it->second() << "\"" << std::endl;
+                }
+                out << "}" << std::endl;
+                break;
+
+            default:
+                return false;
         }
         return true;
     }
+    bool load(std::string filename, FileTypes fileType) {
+        std::ifstream is(filename.c_str());
+        if (!is.is_open()) {
+            return false;
+        }
+        return load(is, fileType);
+    }
+
+
+    bool Properties::load(std::istream& is, FileTypes fileType) {
+        clear();
+        std::string line;
+
+        switch(fileType) {
+            case FileTypes::Property:
+            case FileTypes::INI:
+            case FileTypes::DOTENV:
+            case FileTypes::ENV:
+            case FileTypes::CFG:
+            case FileTypes::CONF:
+            case FileTypes::CNF:
+            case FileTypes::LST:
+            case FileTypes::LIST:
+            case FileTypes::TEXT:
+            case FileTypes::TXT:
+                return loadPropertyFormat(is);
+
+            case FileTypes::XML:
+                return loadXMLFormat(is);
+
+            case FileTypes::JSON:
+                return loadJSONFormat(is);
+
+            case FileTypes::YAML:
+                return loadYAMLFormat(is);
+
+            case FileTypes::TOML:
+                return loadTOMLFormat(is);
+
+            case FileTypes::HOCON:
+            case FileTypes::HCL:
+                return loadHOCONFormat(is);
+
+            case FileTypes::CSV:
+                return loadCSVFormat(is);
+            default:
+                return false;
+        }
+    }
     
+
     // The Properties object needs to be compatible with STL-style iteration
     class PropertiesIterator {
     private:
