@@ -169,6 +169,9 @@ public:
         Entry* next;
         Entry(K k, V v) : key(k), value(v), next(nullptr) {}
     };
+
+    #ifndef KEYVALUE
+    #define KEYVALUE
     struct KeyValuePair {
         K key;
         V value;
@@ -212,6 +215,7 @@ public:
         V& second() { return value; }
         const V& second() const { return value; }
     };
+    #endif // KEYVALUE
 
     class HashtableIterator{
     private:

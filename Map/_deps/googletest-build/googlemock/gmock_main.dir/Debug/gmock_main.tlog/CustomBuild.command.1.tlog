@@ -1,0 +1,10 @@
+^C:\USERS\BRAYD\ONEDRIVE\DOCUMENTS\GITHUB\CPP-FULL-LIBRARY\MAP\_DEPS\GOOGLETEST-SRC\GOOGLEMOCK\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Map -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Map --check-stamp-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Map/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
