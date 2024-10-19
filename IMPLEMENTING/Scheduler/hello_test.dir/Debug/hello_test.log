@@ -1,0 +1,17 @@
+﻿  hello_test.cc
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Scheduler\Scheduler.h(141,30): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'hello_test.cc')
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Scheduler\Scheduler.h(142,30): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'hello_test.cc')
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Scheduler\Scheduler.h(152,22): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'hello_test.cc')
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Scheduler\Scheduler.h(153,32): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'hello_test.cc')
+  
+C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Scheduler\hello_test.cc(12,43): error C2228: left of '.setJobFunc' must have class/struct/union
+      C:\Users\brayd\OneDrive\Documents\GitHub\CPP-Full-Library\Scheduler\hello_test.cc(12,43):
+      type is 'void'
+  

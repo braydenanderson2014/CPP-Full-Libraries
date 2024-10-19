@@ -1,0 +1,10 @@
+^C:\USERS\BRAYD\ONEDRIVE\DOCUMENTS\GITHUB\CPP-FULL-LIBRARY\SCHEDULER\CMAKEFILES\3CD4BAB621EE1A36B3A2E7D005440ED2\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Scheduler -BC:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Scheduler --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Library/Scheduler/my_project.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
