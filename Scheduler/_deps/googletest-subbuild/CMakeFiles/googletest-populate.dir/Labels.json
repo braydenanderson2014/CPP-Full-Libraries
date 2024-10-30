@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/cf6536877ecf2949082dd11874e6bafd/googletest-populate.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/38e0c16d6ff94d5f33a99b419116378a/googletest-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/4d8ce757496eb8b965b38792815f3d5a/googletest-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/4d8ce757496eb8b965b38792815f3d5a/googletest-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/4d8ce757496eb8b965b38792815f3d5a/googletest-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/4d8ce757496eb8b965b38792815f3d5a/googletest-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/4d8ce757496eb8b965b38792815f3d5a/googletest-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/4d8ce757496eb8b965b38792815f3d5a/googletest-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/4d8ce757496eb8b965b38792815f3d5a/googletest-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/brayd/OneDrive/Documents/GitHub/CPP-Full-Libraries/Scheduler/_deps/googletest-subbuild/CMakeFiles/4d8ce757496eb8b965b38792815f3d5a/googletest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest-populate"
+		],
+		"name" : "googletest-populate"
+	}
+}
