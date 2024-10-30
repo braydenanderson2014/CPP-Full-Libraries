@@ -10,6 +10,8 @@
 #include <limits>
 #include <algorithm>
 #include "TypeTraits.h"
+#include <mutex>
+
 //#define DEBUG
 
 template <typename T>
@@ -23,7 +25,7 @@ private:
     void resize(unsigned int newCapacity); // Resize the array to the specified capacity
     void ensureCapacity(); // Ensure that the array has enough capacity to add a new element
     int calculateNewCapacity(); // Calculate the new capacity of the array
-
+    mutable std::mutex mtx; // Mutex for synchronization
 
 public:
     class SimpleVectorIterator; // Forward declaration of the SimpleVectorIterator class
@@ -225,6 +227,7 @@ SimpleVector<T>::~SimpleVector() {
  */
 template <typename T>
 void SimpleVector<T>::ensureCapacity() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
     if (count == capacity) {
         resize(2 * capacity);
     }
@@ -242,6 +245,8 @@ void SimpleVector<T>::ensureCapacity() {
  */
 template <typename T>
 int SimpleVector<T>::calculateNewCapacity() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     return 2 * capacity;
 }
 
@@ -253,6 +258,8 @@ int SimpleVector<T>::calculateNewCapacity() {
  */
 template <typename T>
 void SimpleVector<T>::resize() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Resizing array" << std::endl;
     #endif
@@ -303,6 +310,8 @@ void SimpleVector<T>::resize() {
  */
 template <typename T>  
 void SimpleVector<T>:: resize(unsigned int newCapacity) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Resizing array to new capacity: " << newCapacity << std::endl;
     #endif
@@ -355,6 +364,8 @@ void SimpleVector<T>:: resize(unsigned int newCapacity) {
  */
 template <typename T>
 void SimpleVector<T>::releaseMemory() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Releasing memory" << std::endl;
     #endif
@@ -382,6 +393,8 @@ void SimpleVector<T>::releaseMemory() {
  */
 template <typename T>
 bool SimpleVector<T>::shrinkToFit() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Shrinking to fit" << std::endl;
     #endif
@@ -399,6 +412,7 @@ bool SimpleVector<T>::shrinkToFit() {
  */
 template <typename T>
 void SimpleVector<T>::clear() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
     #ifdef DEBUG
     std::cout << "Clearing array" << std::endl;
     #endif
@@ -415,6 +429,8 @@ void SimpleVector<T>::clear() {
  */
 template <typename T>
 void SimpleVector<T>::push_back(const T& item) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Pushing back element: " << item << std::endl;
     #endif
@@ -433,6 +449,8 @@ void SimpleVector<T>::push_back(const T& item) {
  */
 template <typename T>
 void SimpleVector<T>::put(const T& item) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Adding element: " << item << std::endl;
     #endif
@@ -455,6 +473,8 @@ void SimpleVector<T>::put(const T& item) {
 template <typename T>
 template<typename... Args>
 void SimpleVector<T>::bulk_add(Args&&... args) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
 #ifdef DEBUG
     std::cout << "Adding multiple elements" << std::endl;
 #endif
@@ -492,6 +512,8 @@ void SimpleVector<T>::bulk_add(Args&&... args) {
  */
 template <typename T>
 void SimpleVector<T>::emplace_back() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Emplacing element" << std::endl;
     #endif
@@ -516,6 +538,8 @@ void SimpleVector<T>::emplace_back() {
  */
 template <typename T>
 void SimpleVector<T>::emplace_back(const T& value) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Emplacing element: " << value << std::endl;
     #endif
@@ -538,6 +562,8 @@ void SimpleVector<T>::emplace_back(const T& value) {
  */
 template <typename T>
 T& SimpleVector<T>::back() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Getting last element" << std::endl;
     #endif
@@ -556,6 +582,8 @@ T& SimpleVector<T>::back() {
  */
 template <typename T>
 T& SimpleVector<T>::front() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     #ifdef DEBUG
     std::cout << "Getting first element" << std::endl;
     #endif
@@ -574,6 +602,8 @@ T& SimpleVector<T>::front() {
  */
 template <typename T>
 void SimpleVector<T>::remove(const T& item) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     unsigned int index = 0;
     for (unsigned int i = 0; i < count; i++) {
         if (array[i] == item) {
@@ -595,6 +625,8 @@ void SimpleVector<T>::remove(const T& item) {
  */
 template <typename T>
 T& SimpleVector<T>::operator[](unsigned int index) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     static T dummy;
     if (index >= count || index < 0) {
         throw IndexOutOfBoundsException("Error: Index out of bounds.");
@@ -612,6 +644,8 @@ T& SimpleVector<T>::operator[](unsigned int index) {
  */
 template <typename T>
 const T& SimpleVector<T>::operator[](unsigned int index) const {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     if (index >= count || index < 0) {
         throw IndexOutOfBoundsException("Error: Index out of bounds. "); // You can handle this error differently if needed
     }
@@ -627,6 +661,8 @@ const T& SimpleVector<T>::operator[](unsigned int index) const {
  */
 template <typename T>
 unsigned int SimpleVector<T>::size() const {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     if(this -> capacity == 0){
         return 0;
     }
@@ -642,6 +678,8 @@ unsigned int SimpleVector<T>::size() const {
  */
 template <typename T>
 unsigned int SimpleVector<T>::elements() const {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     if(this -> count == 0){
         return 0;
     }
@@ -660,6 +698,8 @@ unsigned int SimpleVector<T>::elements() const {
  */
 template <typename T>
 T& SimpleVector<T>::get(unsigned int index) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     if (index >= count) {
         throw IndexOutOfBoundsException("Error: Index out of bounds: index cannot be greater than count.");
     }
@@ -678,6 +718,8 @@ T& SimpleVector<T>::get(unsigned int index) {
  */
 template <typename T>
 bool SimpleVector<T>::isEmpty() const {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     return count == 0;
 }
 
@@ -692,6 +734,8 @@ bool SimpleVector<T>::isEmpty() const {
  */
 template <typename T>
 int SimpleVector<T>::indexOf(const T& element) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     for (unsigned int i = 0; i < count; i++) {
         if (array[i] == element) {
             return i;
@@ -768,6 +812,8 @@ public:
  */
 template <typename T>
 typename SimpleVector<T>::SimpleVectorIterator SimpleVector<T>::begin() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     return SimpleVectorIterator(array, array + count);
 }
 
@@ -780,6 +826,8 @@ typename SimpleVector<T>::SimpleVectorIterator SimpleVector<T>::begin() {
  */
 template <typename T>
 typename SimpleVector<T>::SimpleVectorIterator SimpleVector<T>::end() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     return SimpleVectorIterator(array + count, array + count);
 }
 
@@ -792,6 +840,8 @@ typename SimpleVector<T>::SimpleVectorIterator SimpleVector<T>::end() {
  */
 template <typename T>
 const typename SimpleVector<T>::SimpleVectorIterator SimpleVector<T>::cbegin() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     return SimpleVectorIterator(array, array + count);
 }
 
@@ -804,12 +854,16 @@ const typename SimpleVector<T>::SimpleVectorIterator SimpleVector<T>::cbegin() {
  */
 template <typename T>
 const typename SimpleVector<T>::SimpleVectorIterator SimpleVector<T>::cend() {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     return SimpleVectorIterator(array + count, array + count);
 }
 
 
 template <typename T>
 bool SimpleVector<T>::contains(const T& element) {
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     for (unsigned int i = 0; i < count; i++) {
         if (array[i] == element) {
             return true;
@@ -820,6 +874,8 @@ bool SimpleVector<T>::contains(const T& element) {
 
 template <typename T>
 bool SimpleVector<T>::contains(const T& element) const{
+    std::lock_guard<std::mutex> lock(mtx); // Lock for thread-safety
+
     for (unsigned int i = 0; i < count; i++) {
         if (array[i] == element) {
             return true;
