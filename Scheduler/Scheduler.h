@@ -12,6 +12,7 @@
 #include <atomic>
 #include <condition_variable>
 #include <ctime>
+#include <array>
 #include <mutex>
 #include <shared_mutex>
 
@@ -62,6 +63,18 @@ public:
 
     Job(int interval) : interval(interval), unit("seconds"), jobFunc(nullptr), cancelled(false) {}
 
+    // Add fields for day and month scheduling
+    std::array<bool, 7> daysOfWeek{false};  // Each index represents a day, 0 = Sunday, 6 = Saturday
+    std::array<bool, 12> monthsOfYear{false};  // Each index represents a month, 0 = January, 11 = December
+
+
+    void setDaysOfWeek(const std::array<bool, 7>& days) {
+        daysOfWeek = days;
+    }
+
+    void setMonthsOfYear(const std::array<bool, 12>& months) {
+        monthsOfYear = months;
+    }
     // Delete copy constructor and copy assignment operator
     Job(const Job&) = delete;
     Job& operator=(const Job&) = delete;
@@ -103,11 +116,25 @@ public:
     bool shouldRun() const {
         auto now = std::chrono::steady_clock::now();
         bool isDue = now >= nextRun;
-        return isDue && !cancelled;
+        
+        if (cancelled || !isDue) return false;
+        
+        // Check if the current day and month match the scheduling criteria
+        std::time_t t = std::time(nullptr);
+        std::tm* localTime = std::localtime(&t);
+        
+        // Check the day of the week (0 = Sunday, 6 = Saturday)
+        if (daysOfWeek[localTime->tm_wday] == false) return false;
+
+        // Check the month (0 = January, 11 = December)
+        if (monthsOfYear[localTime->tm_mon] == false) return false;
+
+        return true;
     }
 
     void scheduleNextRun() {
-        auto now = std::chrono::steady_clock::now();  // Use steady_clock for accurate intervals    
+        auto now = std::chrono::steady_clock::now();  // Use steady_clock for accurate intervals 
+           
         if (unit == "milliseconds") {
             nextRun = now + std::chrono::milliseconds(interval);
         } else if (unit == "seconds") {
@@ -142,9 +169,59 @@ public:
             nextRun = now + std::chrono::nanoseconds(interval * 16666666 * 60 * 60 * 60 * 60 * 24 * 30);
         } else if (unit == "gameYears") {
             nextRun = now + std::chrono::nanoseconds(interval * 16666666 * 60 * 60 * 60 * 60 * 24 * 365);
+        } else if(unit == "Monday") {
+            setDaysOfWeek({true, false, false, false, false, false, false});
+        } else if(unit == "Tuesday") {
+            setDaysOfWeek({false, true, false, false, false, false, false});
+        } else if(unit == "Wednesday") {
+            setDaysOfWeek({false, false, true, false, false, false, false});
+        } else if(unit == "Thursday") {
+            setDaysOfWeek({false, false, false, true, false, false, false});
+        } else if(unit == "Friday") {
+            setDaysOfWeek({false, false, false, false, true, false, false});
+        } else if(unit == "Saturday") {
+            setDaysOfWeek({false, false, false, false, false, true, false});
+        } else if(unit == "Sunday") {
+            setDaysOfWeek({false, false, false, false, false, false, true});
+        } else if(unit == "January") {
+            setMonthsOfYear({true, false, false, false, false, false, false, false, false, false, false, false});
+        } else if(unit == "February") {
+            setMonthsOfYear({false, true, false, false, false, false, false, false, false, false, false, false});
+        } else if(unit == "March") {
+            setMonthsOfYear({false, false, true, false, false, false, false, false, false, false, false, false});
+        } else if(unit == "April") {
+            setMonthsOfYear({false, false, false, true, false, false, false, false, false, false, false, false});
+        } else if(unit == "May") {
+            setMonthsOfYear({false, false, false, false, true, false, false, false, false, false, false, false});
+        } else if(unit == "June") {
+            setMonthsOfYear({false, false, false, false, false, true, false, false, false, false, false, false});
+        } else if(unit == "July") {
+            setMonthsOfYear({false, false, false, false, false, false, true, false, false, false, false, false});
+        } else if(unit == "August") {
+            setMonthsOfYear({false, false, false, false, false, false, false, true, false, false, false, false});
+        } else if(unit == "September") {
+            setMonthsOfYear({false, false, false, false, false, false, false, false, true, false, false, false});
+        } else if(unit == "October") {
+            setMonthsOfYear({false, false, false, false, false, false, false, false, false, true, false, false});
+        } else if(unit == "November") {
+            setMonthsOfYear({false, false, false, false, false, false, false, false, false, false, true, false});
+        } else if(unit == "December") {
+            setMonthsOfYear({false, false, false, false, false, false, false, false, false, false, false, true});
+        } else if(unit == "July") {
+            setMonthsOfYear({false, false, false, false, false, false, true, false, false, false, false, false});
+        } else if(unit == "August") {
+            setMonthsOfYear({false, false, false, false, false, false, false, true, false, false, false, false});
+        } else if(unit == "September") {
+            setMonthsOfYear({false, false, false, false, false, false, false, false, true, false, false, false});
+        } else if(unit == "October") {
+            setMonthsOfYear({false, false, false, false, false, false, false, false, false, true, false, false});
+        } else if(unit == "November") {
+            setMonthsOfYear({false, false, false, false, false, false, false, false, false, false, true, false});
+        } else if(unit == "December") {
+            setMonthsOfYear({false, false, false, false, false, false, false, false, false, false, false, true});
         } else {
             throw SchedulerIntervalException("Unsupported time unit");
-        } 
+        }
     }
 
     void setUnit(const std::string& u) {
@@ -180,6 +257,17 @@ class Scheduler {
 public:
     Scheduler() : running(false) {}
 
+    Job& scheduleWeekly(int interval, const std::string& unit, const std::array<bool, 7>& days) {
+        Job& job = every(interval, unit);
+        job.setDaysOfWeek(days);
+        return job;
+    }
+
+    Job& scheduleMonthly(int interval, const std::string& unit, const std::array<bool, 12>& months) {
+        Job& job = every(interval, unit);
+        job.setMonthsOfYear(months);
+        return job;
+    }
     void startSchedulerThread() {
         bool expected = false;
         if (running.compare_exchange_strong(expected, true)) {
